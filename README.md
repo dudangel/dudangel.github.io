@@ -1,53 +1,62 @@
----
-title: "About"
-permalink: "/about/"
-layout: page
----
+# Kasper
+
+This is a port of Ghost's default theme [Casper v1](https://github.com/tryghost/casper) for Jekyll. Here is a live [demo](https://rosario.io/kasper). 
+
+Feel free to fork, change, modify and re-use it.
 
 ## Installation
 
-Just fork the repo and adjust the `_config.yml` to use with [Github Pages](https://pages.github.com/) and your page is done.
+    git clone https://github.com/rosario/kasper.git
+    cd kasper
+    gem install jekyll
+    gem install jekyll-paginate
+    
+## Change _config.yml
 
-## Features
+Change the following settings in _config.yaml. Most likely you want the `baseurl: ""`
 
- - supports dark mode on macOS Mojave
- - optional sidebar
- - MathJax support
- - no external ressources
- - included archive page
- - supports pagination
- - feed generation
- - responsive
- - syntax highlighting
- - supports comments via [disqus](https://disqus.com/) or [isso](http://posativ.org/isso/)
-
-## Based on
-
-- [Hyde](https://github.com/poole/hyde)
-- [Minima](https://github.com/jekyll/minima)
-- [Lagrange](https://github.com/LeNPaul/Lagrange)
-- [Font Awesome](http://fontawesome.io/)
-- [KaTeX](https://katex.org/)
-- [Pygments](https://github.com/richleland/pygments-css)
-
-## Installation (jekyll-remote-theme method)
-
-You can use this theme with the `jekyll-remote-theme` plugin. Just create an empty repo, copy over the `index.html` file and add this to your `_config.yml`:
-
-```yaml
-remote_theme: niklasbuschmann/contrast@v2.8
-
-plugins:
-  - jekyll-remote-theme
+```
+baseurl: ""
+domain_name: "yourblog-domain.com"
 ```
 
-## License
+## How to use it
 
-[public domain](http://unlicense.org/)
+Build page and start local web server
+
+    jekyll serve
+
+Build page into `_site` folder
+
+    jekyll build
+
+## Kasper theme includes
+
+* Pagination
+* Rss
+* Google Analytics Tracking code
+* Code Syntax Highlight
+* Author's profile with picture
+* Disqus comments
 
 ## Screenshots
 
-![screenshot](https://user-images.githubusercontent.com/4943215/73125194-5f0b8b80-3fa4-11ea-805c-8387187503ad.png)
+![index page](https://raw.github.com/rosario/kasper/master/assets/images/kasper-theme-index.png)
+![post page](https://raw.github.com/rosario/kasper/master/assets/images/kasper-theme-post.png)
 
-![screenshot](https://user-images.githubusercontent.com/4943215/73125195-5fa42200-3fa4-11ea-89f8-d09c1d6fe252.png)
 
+## Thanks
+
+Most of the work has been already done by the Ghost team, I've just ported Casper to Jekyll. 
+I've also added few things specific to Jekyll and some minor style changes.
+
+## Copyright & License
+
+Copyright (C) 2013 Ghost Foundation - Released under the MIT License.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
