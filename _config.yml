@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Your New Jekyll Site
 description: Blogging about stuffs
 meta_description: "Your New Jekyll Site, Blogging about stuffs"
@@ -17,3 +18,6 @@ author: "Your Name"
 
 # Disqus config
 disqus-shortname: ""
+=======
+theme: jekyll-theme-slate
+>>>>>>> 322701bafe57423a17f8f2a7866e8516af1a9d9f
