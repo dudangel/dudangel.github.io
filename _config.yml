@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-title: Sleek # your site title
-author: GitHub User # You :P
+title: Eduarda Cristina  # your site title
+author: Eduarda Cristina # You :P
 description: > # Meta description of Homepage
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -10,7 +10,7 @@ url: "https://dudangel.github.io/" # the base hostname & protocol for your site,
 
 # SEO PLUGIN
 social:
-  name: Your Name
+  name: Eduarda Cristina 
   links:
     - https://twitter.com/BenBalter
     - https://www.facebook.com/ben.balter
@@ -26,7 +26,7 @@ navigation: # Navigation links
   - {name: 'Contact', link: '/contact'}
 
 tagline: >
-  Modern Jekyll theme focused on speed performance &amp; SEO best practices
+  Modern Jekyll 
 
 hero_img: posts/sleek_lg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
