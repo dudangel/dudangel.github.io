@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About
-permalink: /about/
-image: '/assets/img/eu.jpeg'
+title: Sobre
+permalink: /sobre/
+image: '/assets/img/eu.jpg'
 ---
 
 Hi, my name is Derrick Wells. I like being at the center of events, being free and enjoying every moment. Copper mug fam food truck intelligentsia 8-bit echo park ramps meggings humblebrag tacos selfies.
