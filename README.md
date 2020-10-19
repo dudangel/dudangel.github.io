@@ -1,193 +1,117 @@
-# Sleek
+# Derrick — Minimal Theme for Jekyll.
 
-[![Gem Version](https://badge.fury.io/rb/jekyll-sleek.svg)](https://badge.fury.io/rb/jekyll-sleek) [![Build Status](https://travis-ci.org/janczizikow/sleek.svg?branch=master)](https://travis-ci.org/janczizikow/sleek) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/janczizikow/sleek)
+Derrick is a clean minimal and fast theme for a personal blog.
 
-A modern [Jekyll](https://jekyllrb.com/) theme focused on speed performance & SEO best practices.
+* * *
 
-> ⚠️ This theme is no longer actively maintained.
+Table of Contents
+-----------------
+*   [Features](#features)
+*   [Demo](#demo)
+*   [Deployment](#deployment)
+*   [Posts](#posts)
+*   [Disqus Comments](#DisqusComments)
+*   [Google Analytics](#GoogleAnalytics)
+*   [Update favicon](#UpdateFavicon)
+*   [Support](#Support)
 
-![Sleek Jekyll Theme](./sleek.jpg)
+* * *
 
-## Features
+### Features
 
-* Compatible with [Github Pages](https://pages.github.com/)
-* Minimal, responsive and speed performance optimized
-* SEO friendly, with help of [Jekyll SEO Plugin](https://github.com/jekyll/jekyll-seo-tag)
-* Easy [Google Tag Manager](https://tagmanager.google.com/) Integration
-* Support for [Disqus](https://disqus.com/) comments
-* Form submissions with [Formspree](#formspree)
+* 100% responsive and clean theme
 
-[Preview Demo](https://janczizikow.github.io/sleek/)
+* Optimized for mobile devices
 
-## Installation
+* Minimal design
 
-### System Requirements
+* Valid HTML5 code
 
-To use this project, you'll need the following things on your local machine:
+* Post sharing
 
-#### Jekyll
+* Supports Disqus Comments
 
-```shell
-gem install jekyll
-```
+* Supports Google Analytics
 
-#### NodeJS (8 or greater)
+* Google Fonts
 
-Download and open the [NodeJS installer](https://nodejs.org/en/)
 
-#### Gulp CLI (optional, but recommended)
+* * *
 
-```shell
-npm install --global gulp-cli
-```
+### Demo
 
-### Up & Running
+Check the theme in action [Demo](https://derrick-jekyll.netlify.com)
 
-1. [Fork the repo](https://github.com/janczizikow/sleek/fork)
-2. Clone or download the repo into directory of your choice: `git clone https://github.com/your-github-username/sleek.git`
-3. Inside the directory run `bundle install` and `npm install`
-4. If you want to use [gulp.js](https://gulpjs.com/) run `gulp` or `npm start`
-    * if you don't want to use gulp you can run `bundle exec jekyll serve` instead
+![Main page preview](https://github.com/artemsheludko/derrick/blob/master/assets/img/derrick-preview.jpg?raw=true)
 
-#### Installing to existing jekyll project
+* * *
 
-Add this line to your Jekyll site's `Gemfile`:
+### Deployment
 
-```ruby
-gem "jekyll-sleek"
-```
+To run the theme locally, navigate to the theme directory and run `bundle install` to install the dependencies, then run `jekyll serve` or `bundle exec jekyll serve` to start the Jekyll server.
 
-And add this line to your Jekyll site's `_config.yml`:
+I would recommend checking the [Deployment Methods](https://jekyllrb.com/docs/deployment-methods/) page on Jekyll website.
 
-```yaml
-theme: jekyll-sleek
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll-sleek
-
-## File Structure Overview
-
-```bash
-sleek
-├── _includes	               # theme includes
-├── _js	                       # javascript files (by default jquery will be included with the scripts inside)
-├── _layouts                   # theme layouts (see below for details)
-├── _pages                     # pages folder (empty by default)
-├── _posts                     # blog posts
-├── _sass                      # Sass partials
-├── assets
-|  ├── css	               # minified css files
-|  ├── img                     # images and icons used for the template
-|  └── js		               # bundled and minified files from _js folder
-├── _config.yml                # sample configuration
-├── gulpfile.js                # gulp tasks (tasks autorunner)
-├── index.md                   # sample home page (blog page)
-└── package.json               # gulp tasks
-```
-
-## Usage
-
-You can modify the theme by changing the settings in `_config.yml`.
+* * *
 
 ### Posts
 
-Create a new Markdown file such as 2017-01-13-my-post.md in _post folder. Configure YAML Front Matter (stuff between `---`):
+To create a new post, you can create a new markdown file inside the \_posts directory by following the [recommended file structure](https://jekyllrb.com/docs/posts/#creating-post-files).
 
-```yaml
----
-layout: post # needs to be post
-title: Getting Started with Sleek # title of your post
-featured-img: sleek #optional - if you want you can include hero image
----
-```
+      ---
+      layout: post
+      title: "Welcome to Jekyll!"
+      date: 2018-05-29 18:05:55 +0300
+      image: '/assets/img/03.jpg'
+      tags: Life
+      ---
 
-#### Images
 
-In case you want to add a hero image to the post, apart from changing featured-img in YAML, you also need to add the image file to the project. To do so, just upload an image in .jpg format to `_img` folder. The name must before the .jpg file extension has to match with featured-img in YAML. Next, run `gulp img` from command line to generate optimized version of the image and all the thumbnails. You have to restart the jekyll server to see the changes.
+You can set the tags and the post image.
 
-Sleek uses [Lazy Sizes](https://github.com/aFarkas/lazysizes). Lazy Loader for loading images. Check the link for more info. Lazy Sizes doesnt’t require any configuration and it’s going to be included in your bundled js file.
+Add post images to **/assets/img/** directory.
 
-### Pages
+For tags, try to not add space between two words, for example, `Ruby on Rails`, could be something like (`ruby-on-rails`, `Ruby_on_Rails`, or `Ruby-on-Rails`).
 
-The home page is located under index.md file. To change the content or design you have to edit the default.html file in `_layouts` folder.
+* * *
 
-In order to add a new page, create a new html or markdown file under root directory or inside _pages folder. To add a link in navigation add it in `_config.yml`:
+### Disqus Comments
 
-```yaml
-# THEME SETTINGS
-navigation: # Navigation links
-  - {name: 'Home', link: '/'}
-  - {name: 'About', link: '/about'}
-  - {name: 'Contact', link: '/contact'}
-```
+Derrick Theme comes with Disqus comments enabled.
 
-`name` is the text that will be shown and link, well, it's a link.
+Open `_config.yml` file, and change the `mr-brown` value on line 28 with your [Disqus account shortname](https://help.disqus.com/customer/portal/articles/466208).
 
-### Site configuration
+      Comment Section (Disqus)
+      disqus-identifier: mr-brown # Add your shortname for Disqus Comment. For example mr-brown
 
-Sleek comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to make sure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md) to know how to set it up.
 
-Additionally, in `_config.yml` you can find custom theme settings under `# THEME SETTINGS` comment. Here's a brief overview of those custom settings:
+That’s all you need to setup Disqus from the theme side. If you get any issue regarding that comments are unable to load. First, make sure you have [registered your website with Disqus (Step 1)](https://help.disqus.com/customer/portal/articles/466182-publisher-quick-start-guide).
 
-- `navigation` - collection of links that will be shown in the header
-- `tagline` - text that will be displayed on the homepage under the heading.
-- `hero_img` - background image of the homepage hero section
+And also check [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22) if you still have issues.
 
-Other settings usually enable/disable certain feature, and are discussed with the next sections.
+* * *
 
-### Google Tag Manager
+### Google Analytics
 
-To enable Google Tag Manager, add the uncomment the following line in `_config.yml`:
+To integrate Google Analytics, open `_config.yml`, and add your Google Analytics identifier.
 
-```yaml
-google_tag_manager: GTM-XXXXXXX
-```
+    # Google Analytics
+    google-analytics: # Add your identifier. For example UA-99631805-1
 
-Replace `GTM-XXXXXXX` with your Google Tag Manager Container ID.
 
-**Note** by default GTM tracking snippet will be also included in development environment.
+* * *
 
-Google Tag Manager was chosen for this project as it's more flexible than Google Analytics, and it can be used to add GA to your site.
+### Update favicon
 
-### Disqus
+You can find the current favicon (favicon.ico) inside the theme root directory, just replace it with your new favicon.
 
-To enable Disqus comments, add your [Disqus shortname](https://help.disqus.com/customer/portal/articles/466208) to `_config.yml`:
+* * *
+### License
 
-```yaml
-disqus:
-  shortname: my_disqus_shortname
-```
+Mit License
 
-### Formspree
+* * *
 
-To use [Formspree](https://formspree.io/) with your email address, you need to change the following:
+### Support
 
-Change `your-email@domain.com` email in `_config.yml`
-
-```yaml
-email: your-email@domain.com
-```
-
-You can check if it works by simply submitting the form.
-
-If you have a Formspree Gold Account, you can take advantage of using AJAX to submit form. To do so, uncomment last function in `_js/scripts.js` and run `gulp js`. Now the form will be submitted asynchronously, without leaving the page.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at [https://github.com/janczizikow/sleek](https://github.com/janczizikow/sleek). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install` and `npm install`.
-
-The theme is setup just like a normal Jekyll site! Check out [file structure overview](#file-structure-overview) for details. To test the theme, run `gulp` and open your browser at `http://localhost:3000`. This starts a Jekyll server using the theme. Add pages, documents, data, etc. like normal to test the theme's contents. As you make modifications to the theme and to the content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+<p>If you’d like to support me so I can continue to provide free content and themes you can become my sponsor on <a href="https://www.patreon.com/artemsheludko" target="_blank">Patreon</a>. <b>Thank you for your support ❤️</b><p>
