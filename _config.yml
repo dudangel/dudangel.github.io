@@ -55,7 +55,7 @@ include:
 
 # Tags
 tag_page_dir:         tag
-tag_page_layout:      tag-page
+tag_page_layout:      tag
 tag_permalink_style:  pretty
 
 sass:
